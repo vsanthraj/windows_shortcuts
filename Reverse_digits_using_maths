@@ -1,0 +1,19 @@
+def reverse_digits(num):
+
+    sign = -1 if num < 0 else 1
+
+    num=abs(num)
+
+    reverse_digit=0
+
+    while num > 0:
+
+        last_digit=num%10
+
+        num//=10
+
+        reverse_digit=(reverse_digit*10)+last_digit
+
+    return sign*reverse_digit
+
+print(reverse_digits(123))
